@@ -39,7 +39,7 @@ export const Sidebar = () => {
   const mainNavItems = [
     { label: 'Dashboard', path: '/app/dashboard', icon: LayoutDashboard },
     { label: 'Startup Discovery', path: '/app/discover', icon: Compass },
-    { label: 'My Startups', path: '/app/startups/my', icon: Rocket },
+    { label: 'My Startups', path: '/app/startups', icon: Rocket },
     { label: 'Calendar', path: '/app/calendar', icon: Calendar },
     { label: 'Social Feed', path: '/app/feed', icon: Rss },
     { label: 'Explore People', path: '/app/people', icon: Users },
@@ -140,7 +140,7 @@ export const Sidebar = () => {
           className="flex items-center justify-between p-2 rounded-xl hover:bg-white cursor-pointer transition-all group"
         >
           <div className="flex items-center gap-2.5 min-w-0">
-            <Avatar src={currentUser?.avatar} alt={currentUser?.name} size="sm" isVerified />
+            <Avatar src={currentUser?.avatar} alt={currentUser?.name} size="sm" isVerified={currentUser?.isVerified || false} />
             <div className="min-w-0">
               <h4 className="text-xs font-bold text-slate-900 truncate group-hover:text-emerald-600 transition-colors">
                 {currentUser?.name}
